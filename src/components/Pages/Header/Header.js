@@ -9,10 +9,10 @@ export function Header () {
 
         <div>
             <NavLink to='/' style={handleActiveStyle}>Home</NavLink>
-            <NavLink to='/posts' style={handleActiveStyle}>Posts</NavLink>
+            {/* <NavLink to='/posts' style={handleActiveStyle}>Posts</NavLink>
             <NavLink to='/about' style={handleActiveStyle}>About</NavLink>
             <NavLink to='/contact' style={handleActiveStyle}>Contact</NavLink>
-            <NavLink to='/social' style={handleActiveStyle}>Social</NavLink>
+            <NavLink to='/social' style={handleActiveStyle}>Social</NavLink> */}
         </div>
         
 
