@@ -1,4 +1,4 @@
-export function Home () {
+ function Home () {
     return (
     <div>
         I am Home component
@@ -7,3 +7,5 @@ export function Home () {
        
     )
 }
+
+export default Home;
