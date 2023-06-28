@@ -14,8 +14,13 @@ export const Header = styled.header`
   padding: 8px 0;
   margin-bottom: 16px;
   border-bottom: 1px solid black;
-  
-    > nav {
+  cursor:pointer;
+  list-style:none;
+  text-decoration: none;
+
+    > nav, ul, li {
         display: flex;
+        
     }
+  
 `;

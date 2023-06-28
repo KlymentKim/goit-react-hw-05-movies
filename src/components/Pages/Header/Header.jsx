@@ -1,3 +1,21 @@
+
+export const Header = () =>{
+    return (
+   <main>
+     <h1>I am Header </h1>
+   </main>
+     
+    );
+};
+
+
+
+
+
+
+
+
+
 // import { NavLink, Outlet} from "react-router-dom";
 
 //  function Header () {
