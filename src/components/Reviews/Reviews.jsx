@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { getMovieReviews } from "components/Api/api";
 import { ReviewList, ReviewText } from "./Reviews.styled";
-import { Container } from "components/Layout/Layout.styled";
+
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -30,13 +30,12 @@ const Reviews = () => {
     }, [movieId]);
 
     return (
-        <Container>
+        
             <section>
                 {isLoading && <Loader />}
                 {error && <span>{error}</span>}
-
                 {reviews.length ? 
-                    <ReviewList>
+                   <ReviewList> 
                         {reviews.map(({ id, author, content }) => 
                             <li key={id}>
                                 <h3>Author: {author || "?"}</h3>
@@ -44,10 +43,11 @@ const Reviews = () => {
                             </li>
                             )}
                     </ReviewList>
-
                 : <p>Sorry, we don't have any reviews for this movie.</p>}
+                
             </section>
-        </Container>
+          
+        
     ) 
 }
 

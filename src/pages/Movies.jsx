@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { HiSearch } from "react-icons/hi";
 import { FetchSearch } from 'components/Api/api';
 import { MovieList } from 'components/MovieList/MovieList';
 import { Loader } from 'components/Loader/Loader';
-import { Container } from 'components/Layout/Layout.styled';
-
+import { Container, Input } from 'components/Layout/Layout.styled';
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
@@ -41,13 +39,13 @@ const Movies = () => {
         <Container>
             <main>
                 <form autoComplete="off" onSubmit={onFormSubmit}>
-                    <input type="search" name="input" />
-                    <button><HiSearch size="16" /></button>
+                    <Input type="search" name="input" placeholder='searching'/>
+                    {/* <button><HiSearch size="12" /></button> */}
                 </form>
                 {isLoading && <Loader />}
                 {error && <span>{error}</span>}
                 <MovieList movies={movies}></MovieList>
-            </main>
+            </main>   
         </Container>
        
     )

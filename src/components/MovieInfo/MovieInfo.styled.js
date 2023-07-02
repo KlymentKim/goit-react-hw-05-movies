@@ -18,6 +18,8 @@ export const Poster = styled.img`
 `;
 
 export const InfoWrap = styled.div`
+    width: calc(100% - 20px);
+    padding: 20px;
 `;
 
 export const InfoText = styled.p`

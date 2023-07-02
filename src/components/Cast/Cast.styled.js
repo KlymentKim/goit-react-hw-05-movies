@@ -10,18 +10,11 @@ export const List = styled.ul`
 `;
 
 export const LinkDetails = styled(Link)`
-  /* padding: 4px;
-  border-radius: 4px; */
-  /* border: 1px solid grey; */
-  /* text-decoration: none; */
   color: black;
   font-size: 14px;
   font-weight: 500;
+  height: 100;
 
-  &.active {
-    color: white;
-    background-color: tomato;
-  }
   /* :hover {
     background-color: lightblue;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -40,6 +33,7 @@ export const CastList = styled.ul`
   gap: var(--gap);
   padding: 50px;
   list-style: none;
+  height: 100;
 `;
 
 export const CastItem = styled.li`

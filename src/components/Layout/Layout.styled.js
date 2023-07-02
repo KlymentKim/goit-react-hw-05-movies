@@ -6,6 +6,8 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-left: 16px;
   padding-right:16px;
+  height: 100%;
+ 
 `;
 
 export const Header = styled.header`
@@ -15,6 +17,7 @@ export const Header = styled.header`
   gap: 12px;
   padding: 16px;
   margin: 0 0 16px;
+  border-radius: 5px;
   
   box-shadow: 0px 15px 10px -15px #111;   
   background-color: #f5f5f5;
@@ -67,7 +70,32 @@ export const GoBackLink = styled(Link)`
     background-color: lightblue;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
-
   
   }    
+`;
+
+export const Input= styled.input`
+  background-image: linear-gradient(#13fc0c, #13fc0c), linear-gradient(#444444, #444444);
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  float: none;
+  background-color: transparent;
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  padding: 0;
+  transition: background 0s ease-out 0s;
+  color: #444444;
+  min-height: 35px;
+  min-width: 50%;
+  display: initial;
+  outline: none;
+  font-size: 20px;
+  &:focus {
+      background-size: 100% 2px, 100% 1px;
+      outline: 0 none;
+      transition-duration: 0.3s;
+      color: #525252;
+    }
 `;
