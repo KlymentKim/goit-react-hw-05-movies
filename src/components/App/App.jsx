@@ -1,38 +1,25 @@
-import { Routes, Route, NavLink } from "react-router-dom";
-import { Layout } from "./Layout";
-// import { Header }  from "components/Pages/Header/Header";
-import { Home } from "components/Pages/Home/Home";
-import { Container, Header } from "./App.styled";
+import { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "components/Layout/Layout";
 
+const Home = lazy(() => import("pages/Home"));
+const Movies = lazy(() => import("pages/Movies"));
+const MovieDetails = lazy(() => import("pages/MovieDetails"));
+const Cast = lazy(() => import("../Cast/Cast"));
+const Reviews = lazy(() => import("../Reviews/Reviews"));
 
 export const App = () => {
-    const handleActiveStyle = ({ isActive }) => {
-        return { color: isActive ? "red" : "black", marginRight: 20};
-    }
-      return(   
-    <Container>
-       <Header>
-            <nav>
-            <ul>
-                <li><NavLink to ="/" end style={handleActiveStyle}> Home </NavLink></li>
-                <li><NavLink to ="/movies" style={handleActiveStyle}> Movies </NavLink></li>
-            </ul>
-                
-            
-            </nav>             
-        </Header>
-        
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="header" element={ <div> <Header /> </div>} />
-          <Route index element={<Home />} />
-          
-        </Routes>
-
-    </Container>       
-       
-        
-
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="movies" element={<Movies />} />
+        <Route path="movies/:movieId" element={<MovieDetails />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
+  );
 };
-
